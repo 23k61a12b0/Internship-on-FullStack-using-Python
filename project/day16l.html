@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="username" placeholder="Enter your username" onblur="handleEvent(event)">
+        <button type="onblur">onblur</button>
+    </form>
+    <script>
+        function handleEvent(event) {
+            alert("Input field lost focus!");
+        }
+    </script>
+    <form onreset="handleEvent(event)">
+        <input type="text" id="username" placeholder="Enter your username">
+        <button type="reset">reset</button>
+    </form>
+    <script>
+        function handleEvent(event) {
+            alert("Form has been reset!");
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    button {
+      background-color: aqua;
+      color: red;
+      padding: 10px 20px;
+      width: 100px;
+      border: auto;
+    }
+    button:hover {
+      background-color: blue;
+      color: white;
+      cursor: pointer;
+    }
+    .one {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+    }
+    .one:hover {
+      background-color: red;
+      color: white;
+      cursor: pointer;
+    }
+    p {
+      font-size: 20px;
+      color: green;
+      font-family: "Times New Roman", Times, serif;
+      width: auto;
+      margin: 20px;
+      border: 5px solid black;
+      padding: 10px;
+      border-radius: 20px;
+    }
+  </style>
+  <body>
+    <input
+      onkeyup="console.log('keyup')"
+      onkeydown="console.log('keydown')"
+      onkeypress="console.log('keypress')"
+    />
+    <p id="output"></p>
+    <input id="text" placeholder="Enter your name" onkeyup="showKey(event)" />
+
+    <p
+      onmouseover="this.style.backgroundColor='pink'"
+      onmouseout="this.style.backgroundColor='grey'"
+    >
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
+      laudantium, voluptas architecto omnis ea, eaque modi vero eligendi totam
+      fugit sint eveniet, voluptatum culpa eius corrupti harum doloribus facilis
+      reprehenderit!
+    </p>
+    <div>
+      <button class="one">cancel</button>
+    </div>
+    <button>submit</button><br />
+    <script>
+      let typedKeys = "";
+      function showKey(event) {
+        typedKeys += event.key;
+        document.getElementById("output").innerHTML =
+          "keys typed: " + typedKeys;
+      }
+    </script>
+  </body>
+</html>

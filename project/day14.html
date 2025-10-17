@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color:blue
+        }
+        p {
+            font-size: 16px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+<form action="user-container"></form>
+    <label for="count">username</label>
+    <input type="text" id="count" onkeyup="CountChar()" placeholder="Enter your username">
+    <p>Character:<span id="CountChar">0</span></p>
+    <script>
+        function CountChar() {
+            let length = document.getElementById("count").value.length;
+            document.getElementById("CountChar").innerHTML = length;
+        }
+</script>
+</body>
+</html>

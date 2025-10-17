@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Change Background & Text Color & Clear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .login-container {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <form class="user-name" id="user">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required autofocus>
+
+      <!-- Buttons stacked vertically -->
+      <button type="button" id="alertBtn">Click Me</button>
+      <button type="button" id="bgBtn">Change Background</button>
+      <button type="button" id="textColorBtn">Change Text Color</button>
+      <button type="button" id="clearBtn">Clear</button>
+    </form>
+    <p id="displayMessage" class="message"></p>
+  </div>
+
+  <script>
+    const button = document.getElementById("alertBtn");
+    const bgButton = document.getElementById("bgBtn");
+    const textColorButton = document.getElementById("textColorBtn");
+    const clearButton = document.getElementById("clearBtn");
+    const displayMessage = document.getElementById("displayMessage");
+    const usernameInput = document.getElementById("username");
+
+    button.addEventListener("click", function () {
+      const username = usernameInput.value.trim();
+      displayMessage.textContent = username 
+        ? (`Hello ${username}`)
+        : "Please enter your username.";
+    });
+
+    bgButton.addEventListener("click", function () {
+      document.body.style.backgroundColor = "#424ef5";
+    });
+
+    textColorButton.addEventListener("click", function () {
+      usernameInput.style.color = "#f542bf";
+    });
+
+    clearButton.addEventListener("click", function () {
+      usernameInput.value = "";
+      usernameInput.style.color = "";
+      displayMessage.textContent = "";
+      document.body.style.backgroundColor = "";
+    });
+  </script>
+
+</body>
+</html>

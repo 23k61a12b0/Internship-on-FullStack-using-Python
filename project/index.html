@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lyrics Finder</title>
+<style>
+  body {
+    margin: 0;
+
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    flex-direction: column;
+    align-items: center;
+
+    color: #333;
+  }
+
+  header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #222;
+  }
+
+  .search-container {
+    margin: 30px 20px;
+    width: 100%;
+
+    align-items: stretch;
+  }
+  button {
+    margin-top: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #ff7e5f;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+   
+  }
+
+  button:hover {
+    background-color: #feb47b;
+  }
+
+  .lyrics-box {
+   
+    width: 90%;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 15px;
+ 
+    margin: 20px auto;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    display: none;
+  }
+
+
+</style>
+</head>
+<body>
+
+
+<header>
+  <h1>Lyrics Finder</h1>
+
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Enter lyric snippet..."/>
+  <button>
+    <a href="text.html">Search</a>
+  </button>
+  
+</div>
+<div id="lyricsDisplay" class="lyrics-box"></div>
+</body>
+</html>
